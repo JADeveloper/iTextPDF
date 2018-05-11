@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jadev.itextpdf.MainActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+            <EditText
+                android:id="@+id/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título do documento"/>
+            <EditText
+                android:id="@+id/corpo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Corpo do documento"
+                android:layout_below="@id/titulo"
+                android:minHeight="140dp"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/autor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Autor do documento"
+                android:layout_below="@id/corpo"/>
+            <Button
+                android:text="Gerar PDF"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/autor"
+                android:onClick="gerarPDf"/>
+        </RelativeLayout>
+</ScrollView>
